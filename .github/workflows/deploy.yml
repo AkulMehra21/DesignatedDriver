@@ -19,3 +19,8 @@ jobs:
           publish_dir: ./
           user_name: AkulMehra
           user_email: akulfifa@gmail.com
+
+      - name: Add custom headers for cross-origin isolation
+        run: |
+          echo "Cross-Origin-Opener-Policy: same-origin" >> .git/attributes
+          echo "Cross-Origin-Embedder-Policy: require-corp" >> .git/attributes
